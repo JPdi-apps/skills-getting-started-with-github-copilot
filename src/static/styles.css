@@ -89,9 +89,11 @@ section h3 {
   letter-spacing: 0.5px;
 }
 .participants-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0 0 0 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
 }
 .participant-item {
   margin-bottom: 3px;
@@ -99,14 +101,22 @@ section h3 {
   color: #333;
   display: flex;
   align-items: center;
+  padding: 2px 0;
 }
-.participant-item::before {
-  content: "\2022";
-  color: #1976d2;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+.participant-email {
+  flex: 1;
+  word-break: break-all;
+}
+.delete-participant {
+  color: #d32f2f;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  user-select: none;
+}
+.delete-participant:hover {
+  color: #b71c1c;
 }
 .no-participants {
   color: #888;
